@@ -48,10 +48,7 @@ public class WormHead : MonoBehaviour
             last = comp;
         }
 
-        for (int i = 0; i < health.WeakPoints.Count; i++)
-        {
-            health.WeakPoints[i].Dependant = first.gameObject;
-        }
+        health.WeakPoints[0].Dependant = first.gameObject;
 
         dist = (transform.position - first.transform.position).magnitude;
         timer = fireRate;
