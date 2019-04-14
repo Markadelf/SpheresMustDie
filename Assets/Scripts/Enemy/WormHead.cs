@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WormHead : MonoBehaviour {
+public class WormHead : MonoBehaviour
+{
 
     public GameObject WormTail;
     public int Length;
@@ -11,10 +12,14 @@ public class WormHead : MonoBehaviour {
     ComplexEnemyHealth health;
     WormBody first;
     private float dist;
+    public float fireRate;
+    public float fireDelay;
+    private float timer;
 
     // Use this for initialization
-    void Start () {
-        GetComponent<FlierAI>();
+    void Start()
+    {
+        ai = GetComponent<FlierAI>();
         health = GetComponent<ComplexEnemyHealth>();
         Transform node = health.WeakPoints[0].transform;
         GameObject next = Instantiate(WormTail);
@@ -25,6 +30,7 @@ public class WormHead : MonoBehaviour {
         next.transform.position = node.position;
         node = comp.Connect.transform;
         node.forward = transform.forward;
+        node.up = Vector3.up;
 
         for (int i = 1; i < Length; i++)
         {
@@ -35,6 +41,7 @@ public class WormHead : MonoBehaviour {
             next.transform.position = node.position;
             node = comp.Connect.transform;
             node.forward = transform.forward;
+            node.up = Vector3.up;
             last.Weak.Dependant = next;
             last.Next = comp;
             last = comp;
@@ -46,6 +53,7 @@ public class WormHead : MonoBehaviour {
         }
 
         dist = (transform.position - first.transform.position).magnitude;
+        timer = fireRate;
     }
 
     // Update is called once per frame
@@ -55,6 +63,15 @@ public class WormHead : MonoBehaviour {
         if (first != null)
         {
             first.WormMove(transform.position, dist);
+            if (timer > 0 && ai.Alert)
+            {
+                timer -= Time.deltaTime;
+                if (timer <= 0)
+                {
+                    first.WormShoot(fireDelay);
+                    timer = fireRate;
+                }
+            }
         }
     }
 }

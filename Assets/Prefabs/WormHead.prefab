@@ -608,7 +608,7 @@ Transform:
   m_GameObject: {fileID: 1268058646478150}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
   m_LocalPosition: {x: 793.4541, y: 13.901043, z: -27.82886}
-  m_LocalScale: {x: 2.2017584, y: 2.2017584, z: 2.2017584}
+  m_LocalScale: {x: 2.20176, y: 2.20176, z: 2.20176}
   m_Children:
   - {fileID: 4776752770618828}
   - {fileID: 4656348385125146}
@@ -1532,7 +1532,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WormTail: {fileID: 1491251606590598, guid: 5c20cefb0a85f6f44a0461714b9cac48, type: 2}
-  Length: 100
+  Length: 10
+  fireRate: 0.25
+  fireDelay: 0.2
 --- !u!114 &114337729376758378
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1556,8 +1558,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fad48ecfe335b4b42873d62f4c9d4e25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 30
-  Agility: 0.8
+  Speed: 20
+  Agility: 1
   SightDistance: -1
   BlockSight:
     serializedVersion: 2
@@ -1574,9 +1576,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Muzzles: []
-  bulletPrefab: {fileID: 1759030380385532, guid: ca59cb1738ddfa24280dd62692c57e7a,
+  bulletPrefab: {fileID: 1759030380385532, guid: 115f85f6c4f793548969607fc1027549,
     type: 2}
   CoolDown: 0.3
+  AutoFire: 0
 --- !u!114 &114610818606637594
 MonoBehaviour:
   m_ObjectHideFlags: 1

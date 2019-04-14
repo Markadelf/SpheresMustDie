@@ -11,6 +11,7 @@ public class FlierAI : MonoBehaviour {
     private Rigidbody rigid;
     private Gun blaster;
     private bool alert;
+    public bool Alert { get { return alert; } }
 
 	// Use this for initialization
 	void Start () {

@@ -8,6 +8,7 @@ public class Gun : MonoBehaviour
     public List<Transform> Muzzles;
     public GameObject bulletPrefab;
     public float CoolDown;
+    public bool AutoFire;
 
     private float timer;
 
@@ -17,6 +18,10 @@ public class Gun : MonoBehaviour
         if (timer > 0)
         {
             timer -= Time.deltaTime;
+        }
+        else if(AutoFire)
+        {
+            TryShoot();
         }
     }
 
