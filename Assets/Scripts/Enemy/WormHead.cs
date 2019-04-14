@@ -8,6 +8,7 @@ public class WormHead : MonoBehaviour
     public GameObject WormTail;
     public int Length;
     public int enrageLength;
+    public float finalEnragePeriod;
 
     FlierAI ai;
     ComplexEnemyHealth health;
@@ -16,6 +17,9 @@ public class WormHead : MonoBehaviour
     public float fireRate;
     public float fireDelay;
     private float timer;
+    private bool enrageState;
+    private float speed;
+    private float agility;
 
     // Use this for initialization
     void Start()
@@ -52,6 +56,10 @@ public class WormHead : MonoBehaviour
 
         dist = (transform.position - first.transform.position).magnitude;
         timer = fireRate;
+
+        speed = ai.Speed;
+        agility = ai.Agility;
+        enrageState = false;
     }
 
     // Update is called once per frame
@@ -69,6 +77,31 @@ public class WormHead : MonoBehaviour
                     first.WormShoot(fireDelay);
                     timer = fireRate;
                 }
+            }
+        }
+        else
+        {
+            timer -= Time.deltaTime;
+            if (timer <= 0)
+            {
+                if (enrageState)
+                {
+                    ai.Speed = speed * 1.5f;
+                    ai.Agility = 0;
+                }
+                else
+                {
+                    ai.Speed = 0;
+                    ai.Agility = agility * 1.75f;
+                }
+                timer = finalEnragePeriod;
+                enrageState = !enrageState;
+            }
+            if (enrageState && FirstPerson.PLAYER != null)
+            {
+                Vector3 target = transform.position;
+                target.y = FirstPerson.PLAYER.transform.position.y;
+                transform.position = Vector3.MoveTowards(transform.position, target, speed / 3 * Time.deltaTime);
             }
         }
     }

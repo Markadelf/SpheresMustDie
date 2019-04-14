@@ -15,9 +15,15 @@ public class Bullet : MonoBehaviour {
         rigid = GetComponent<Rigidbody>();
 	}
 
-    private void OnEnable()
+    //private void OnEnable()
+    //{
+    //    rigid.velocity = transform.forward * speed;
+    //    timer = range / speed;
+    //}
+
+    public void Fire(Vector3 baseVel)
     {
-        rigid.velocity = transform.forward * speed;
+        rigid.velocity = baseVel + transform.forward * speed;
         timer = range / speed;
     }
 

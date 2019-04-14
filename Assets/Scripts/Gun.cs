@@ -9,8 +9,15 @@ public class Gun : MonoBehaviour
     public GameObject bulletPrefab;
     public float CoolDown;
     public bool AutoFire;
+    public bool ApplyVelocity;
 
+    private Vector3 lastPos;
     private float timer;
+
+    private void Start()
+    {
+        lastPos = transform.position;
+    }
 
     // Update is called once per frame
     void Update()
@@ -23,6 +30,11 @@ public class Gun : MonoBehaviour
         {
             TryShoot();
         }
+    }
+
+    private void LateUpdate()
+    {
+        lastPos = transform.position;
     }
 
     public void TryShoot()
@@ -41,6 +53,18 @@ public class Gun : MonoBehaviour
                     bullet.transform.position = Muzzles[i].position;
                     bullet.transform.forward = Muzzles[i].forward;
                     bullet.SetActive(true);
+                    Bullet bull = bullet.GetComponent<Bullet>();
+                    if (bull)
+                    {
+                        if (ApplyVelocity)
+                        {
+                            bull.Fire((transform.position - lastPos) / Time.deltaTime);
+                        }
+                        else
+                        {
+                            bull.Fire(Vector3.zero);
+                        }
+                    }
                 }
             }
             timer = CoolDown;
