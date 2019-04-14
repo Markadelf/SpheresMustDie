@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33804850860762528}
   - component: {fileID: 23835796684322820}
   - component: {fileID: 135219737935105622}
+  - component: {fileID: 114871773850229498}
   m_Layer: 16
   m_Name: Sphere (2)
   m_TagString: Untagged
@@ -40,6 +41,7 @@ GameObject:
   - component: {fileID: 33882991699195470}
   - component: {fileID: 23651485107679852}
   - component: {fileID: 135964430595663736}
+  - component: {fileID: 114725759141702906}
   m_Layer: 16
   m_Name: Sphere (1)
   m_TagString: Untagged
@@ -78,6 +80,7 @@ GameObject:
   - component: {fileID: 23045165890217274}
   - component: {fileID: 135051262969257230}
   - component: {fileID: 114802059128754034}
+  - component: {fileID: 114441509411400612}
   m_Layer: 16
   m_Name: WeakPoint
   m_TagString: Untagged
@@ -96,6 +99,7 @@ GameObject:
   - component: {fileID: 33277410967615258}
   - component: {fileID: 23401705031097754}
   - component: {fileID: 135043877076326658}
+  - component: {fileID: 114485773006778016}
   m_Layer: 16
   m_Name: Sphere
   m_TagString: Untagged
@@ -114,6 +118,7 @@ GameObject:
   - component: {fileID: 33975024473024984}
   - component: {fileID: 23217284430345546}
   - component: {fileID: 135554857734935150}
+  - component: {fileID: 114703570324807150}
   m_Layer: 16
   m_Name: Sphere (3)
   m_TagString: Untagged
@@ -255,7 +260,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1491251606590598}
   m_LocalRotation: {x: 0.70710677, y: 0.7071069, z: -0, w: 0}
-  m_LocalPosition: {x: 785.6327, y: 16.910168, z: -31.599493}
+  m_LocalPosition: {x: 716.4481, y: 36.402657, z: 43.359837}
   m_LocalScale: {x: 3.5850947, y: 3.5850947, z: 3.585098}
   m_Children:
   - {fileID: 4068270515560180}
@@ -608,6 +613,54 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WeakPoints:
   - {fileID: 114802059128754034}
+--- !u!114 &114441509411400612
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1528324205655016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0791ed4c6c926e4199f917223d0018f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poofPrefab: {fileID: 1971579812842300, guid: 689b3d0ca6d612242a1c4eb0c7c73653, type: 2}
+--- !u!114 &114485773006778016
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1746110105593408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0791ed4c6c926e4199f917223d0018f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poofPrefab: {fileID: 1971579812842300, guid: 689b3d0ca6d612242a1c4eb0c7c73653, type: 2}
+--- !u!114 &114703570324807150
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1755899218267798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0791ed4c6c926e4199f917223d0018f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poofPrefab: {fileID: 1971579812842300, guid: 689b3d0ca6d612242a1c4eb0c7c73653, type: 2}
+--- !u!114 &114725759141702906
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1035952641574106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0791ed4c6c926e4199f917223d0018f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poofPrefab: {fileID: 1971579812842300, guid: 689b3d0ca6d612242a1c4eb0c7c73653, type: 2}
 --- !u!114 &114730037891717874
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -635,6 +688,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Dependant: {fileID: 0}
+--- !u!114 &114871773850229498
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1015994754149354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0791ed4c6c926e4199f917223d0018f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poofPrefab: {fileID: 1971579812842300, guid: 689b3d0ca6d612242a1c4eb0c7c73653, type: 2}
 --- !u!135 &135043877076326658
 SphereCollider:
   m_ObjectHideFlags: 1
