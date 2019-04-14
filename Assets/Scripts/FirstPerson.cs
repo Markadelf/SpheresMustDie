@@ -97,7 +97,7 @@ public class FirstPerson : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == 13)
+        if (other.gameObject.layer == 13 || other.gameObject.layer == 11)
         {
             Destroy(gameObject);
         }

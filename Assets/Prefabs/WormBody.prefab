@@ -55,10 +55,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4829592068515904}
-  - component: {fileID: 114426411866054096}
   - component: {fileID: 114730037891717874}
   - component: {fileID: 54210740524405042}
   - component: {fileID: 114277063189014834}
+  - component: {fileID: 114292605028786248}
   m_Layer: 16
   m_Name: WormBody
   m_TagString: Untagged
@@ -77,6 +77,7 @@ GameObject:
   - component: {fileID: 33382897387284618}
   - component: {fileID: 23045165890217274}
   - component: {fileID: 135051262969257230}
+  - component: {fileID: 114802059128754034}
   m_Layer: 16
   m_Name: WeakPoint
   m_TagString: Untagged
@@ -131,7 +132,7 @@ GameObject:
   - component: {fileID: 33499007026664104}
   - component: {fileID: 23858944791955872}
   - component: {fileID: 135445259647059732}
-  m_Layer: 16
+  m_Layer: 11
   m_Name: Sphere (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -149,7 +150,7 @@ GameObject:
   - component: {fileID: 33861737178716860}
   - component: {fileID: 23905474205388328}
   - component: {fileID: 135521667962580560}
-  m_Layer: 16
+  m_Layer: 11
   m_Name: Sphere (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -254,7 +255,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1491251606590598}
   m_LocalRotation: {x: 0.70710677, y: 0.7071069, z: -0, w: 0}
-  m_LocalPosition: {x: 807.38983, y: 22.379528, z: -9.882565}
+  m_LocalPosition: {x: 757.65753, y: 33.99177, z: -35.249657}
   m_LocalScale: {x: 3.5850947, y: 3.5850947, z: 3.585098}
   m_Children:
   - {fileID: 4068270515560180}
@@ -594,7 +595,7 @@ MonoBehaviour:
     type: 2}
   CoolDown: 0
   AutoFire: 0
---- !u!114 &114426411866054096
+--- !u!114 &114292605028786248
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -602,10 +603,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1491251606590598}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fbedc1e44dbbfd4b82a74f6082e7679, type: 3}
+  m_Script: {fileID: 11500000, guid: 621c4ac3dd0f7834fb6a98f15e66e5c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Dependant: {fileID: 0}
+  WeakPoints:
+  - {fileID: 114802059128754034}
 --- !u!114 &114730037891717874
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -617,10 +619,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f8601e11be2d59488552b79b218f06d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Weak: {fileID: 114426411866054096}
+  Weak: {fileID: 114802059128754034}
   Connect: {fileID: 4468819633551010}
   Next: {fileID: 0}
   delta: {x: 0, y: 0, z: 0}
+--- !u!114 &114802059128754034
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1528324205655016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fbedc1e44dbbfd4b82a74f6082e7679, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Dependant: {fileID: 0}
 --- !u!135 &135043877076326658
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -664,7 +678,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1992582954473148}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -676,7 +690,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1995573279462880}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5

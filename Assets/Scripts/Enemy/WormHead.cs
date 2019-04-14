@@ -7,6 +7,7 @@ public class WormHead : MonoBehaviour
 
     public GameObject WormTail;
     public int Length;
+    public int enrageLength;
 
     FlierAI ai;
     ComplexEnemyHealth health;
@@ -62,8 +63,8 @@ public class WormHead : MonoBehaviour
         //return;
         if (first != null)
         {
-            first.WormMove(transform.position, dist);
-            if (timer > 0 && ai.Alert)
+            int l = first.WormMove(transform.position, dist);
+            if (timer > 0 && l <= enrageLength)
             {
                 timer -= Time.deltaTime;
                 if (timer <= 0)

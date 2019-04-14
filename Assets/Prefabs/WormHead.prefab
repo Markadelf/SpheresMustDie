@@ -1532,7 +1532,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WormTail: {fileID: 1491251606590598, guid: 5c20cefb0a85f6f44a0461714b9cac48, type: 2}
-  Length: 10
+  Length: 12
+  enrageLength: 8
   fireRate: 0.25
   fireDelay: 0.2
 --- !u!114 &114337729376758378

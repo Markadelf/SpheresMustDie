@@ -32,12 +32,20 @@ public class WormBody : MonoBehaviour {
     }
 
     // Update is called once per frame
-    public void WormMove (Vector3 pos, float dist) {
+    // Feeds back length info
+    public int WormMove(Vector3 pos, float dist)
+    {
         Vector3 delta = pos - transform.position;
         transform.forward = delta;
         transform.position = pos - (delta.normalized * dist);
-        if(Next)
-            Next.WormMove(transform.position, dist);
+        if (Next)
+        {
+            return 1 + Next.WormMove(transform.position, dist);
+        }
+        else
+        {
+            return 1;
+        }
     }
 
     public void WormShoot(float delay)
