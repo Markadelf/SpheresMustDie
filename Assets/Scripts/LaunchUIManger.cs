@@ -11,7 +11,10 @@ public class LaunchUIManger : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("LaunchScene");
+        }
 	}
 
 
@@ -22,7 +25,7 @@ public class LaunchUIManger : MonoBehaviour {
 
     public void ShowCredits()
     {
-        SceneManager.LoadScene("Credits-Sceme");
+        SceneManager.LoadScene("Credits-Scene");
     }
 
     public void ExitGame()
