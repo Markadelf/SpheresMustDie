@@ -14,15 +14,20 @@ public class KrakenManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        health = startHealth;
-        spawner.StartSpawning();
+        if (!BossDeathTracker.CheckDead(2)) {
+            health = startHealth;
+            spawner.StartSpawning();
+        }
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
         if (health <= 0) {
-            Debug.Log("STOP");
+            BossDeathTracker bdt = GetComponent<BossDeathTracker>();
+            if (bdt != null) {
+                bdt.MarkDead();
+            }
             spawner.StopSpawning();
         }
 
