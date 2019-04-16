@@ -32,7 +32,7 @@ public class FirstPerson : MonoBehaviour {
         camAngle = 0;
         Cursor.lockState = CursorLockMode.Locked;
         yVel = 0;
-        jumpSpeed = JumpDist / JumpTime - Gravity/2 * JumpTime;
+        jumpSpeed = JumpDist / JumpTime - Gravity/(2 * JumpTime);
         canJump = 0;
         PLAYER = this;
         Cursor.visible = false;
