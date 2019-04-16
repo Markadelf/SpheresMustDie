@@ -6232,6 +6232,26 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4032663035917272, guid: dd8d54ec64aaad74ea733bd1be3ceb56,
     type: 2}
   m_PrefabInternal: {fileID: 689098102}
+--- !u!1 &1388228032 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1343425097614712, guid: 8059b8e8ef7a23d4a969254a25d758c9,
+    type: 2}
+  m_PrefabInternal: {fileID: 614264483}
+--- !u!54 &1388228033
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1388228032}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1389038944
 Prefab:
   m_ObjectHideFlags: 0

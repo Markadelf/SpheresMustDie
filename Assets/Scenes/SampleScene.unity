@@ -429,8 +429,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 472918779}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1, z: 0}
-  m_LocalScale: {x: 42.93349, y: 1.7782726, z: 54.750065}
+  m_LocalPosition: {x: -68.21, y: -1, z: -70.04}
+  m_LocalScale: {x: 179.46199, y: 1.7782726, z: 194.91023}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
@@ -653,7 +653,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 710615394}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 18.24481, y: 16.814142, z: 0}
+  m_LocalPosition: {x: 18.24481, y: 16.814142, z: -141.60442}
   m_LocalScale: {x: 42.93349, y: 1.7782726, z: 54.750065}
   m_Children: []
   m_Father: {fileID: 0}
@@ -784,7 +784,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 779760310}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -18.244791, y: 17.685854, z: 0}
+  m_LocalPosition: {x: -18.244791, y: 17.685854, z: -141.60442}
   m_LocalScale: {x: 42.93349, y: 1.7782726, z: 54.750065}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1088,7 +1088,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1244752141}
   m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: -1.289019, y: 17.280779, z: -18.204409}
+  m_LocalPosition: {x: -1.289019, y: 17.280779, z: -159.80882}
   m_LocalScale: {x: 42.93349, y: 1.7782726, z: 54.750065}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1181,6 +1181,11 @@ MonoBehaviour:
   JumpDist: 10
   TerminalVelocity: 100
   JumpCount: 2
+  DeathHeight: -10
+  shouldHaveDash: 1
+  dashKey: 308
+  dashSpeed: 100
+  dashDecceleration: 80
   blaster: {fileID: 1372472692}
 --- !u!143 &1372472689
 CharacterController:
@@ -1243,6 +1248,8 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1759030380385532, guid: 0295d2fc5e9bff7439dcdbc5e2ef9c05,
     type: 2}
   CoolDown: 0.1
+  AutoFire: 0
+  ApplyVelocity: 0
 --- !u!1001 &1374558612
 Prefab:
   m_ObjectHideFlags: 0
@@ -1695,7 +1702,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2107787281}
   m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 1.2890381, y: 17.219217, z: 18.204409}
+  m_LocalPosition: {x: 1.2890381, y: 17.219217, z: -123.4}
   m_LocalScale: {x: 42.93349, y: 1.7782726, z: 54.750065}
   m_Children: []
   m_Father: {fileID: 0}
