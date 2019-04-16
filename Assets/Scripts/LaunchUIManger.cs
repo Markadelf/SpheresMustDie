@@ -20,7 +20,7 @@ public class LaunchUIManger : MonoBehaviour {
 
     public void StartGame()
     {
-        SceneManager.LoadScene("Boss 1");
+        SceneManager.LoadScene("Hub");
     }
 
     public void ShowCredits()

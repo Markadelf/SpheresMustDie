@@ -3,86 +3,28 @@ using System.Collections;
 
 public class Display : MonoBehaviour {
 
-    public float angle = 0.0f;
-    public Quaternion rotation;
-    public bool On = false;
-    public bool Off = true;
-    public Quaternion Origin;
+    private float angle = 0.0f;
+    private Quaternion rotation;
+    private Vector3 position;
+    public float offSet = 0;
 
 	// Use this for initialization
 	void Start ()
     {
-        rotation = transform.rotation;
-        Origin = gameObject.transform.rotation;
+        rotation = this.gameObject.transform.rotation;
+        position = this.gameObject.transform.position;
+        Debug.Log(rotation);
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-        rotation = Quaternion.Euler(0, angle, 0);
+        rotation = Quaternion.Euler(rotation.x, angle, rotation.z);
+        angle -= 15.0f * Time.deltaTime;
+
+        position.y = Mathf.Sin(Time.time)/2 + offSet;
+
         transform.rotation = rotation;
-
-        if (gameObject.tag == "Shield")
-        {
-            rotation = Quaternion.Euler(0, 0, angle);
-            transform.rotation = rotation;
-        }
-
-
-        if (Input.GetKey(KeyCode.Alpha1))
-        {
-            On = true;
-            Off = false;
-        }
-        else if (Input.GetKey(KeyCode.Alpha2))
-        {
-            if (gameObject.tag == "Back")
-            {
-                On = false;
-                Off = true;
-                rotation = Quaternion.Euler(0, 0, 0);
-                angle = 0.0f;
-            }
-            else if (gameObject.tag == "Sides")
-            {
-                On = false;
-                Off = true;
-                rotation = Quaternion.Euler(0, 90, 0);
-                angle = 90.0f;
-            }
-            else if (gameObject.tag == "Shield")
-            {
-                On = false;
-                Off = true;
-                rotation = Quaternion.Euler(0, 0, 0);
-                angle = 0.0f;
-            }
-        }
-
-        if (On == true)
-        {
-            Turn();
-        }
-       
-
-        if (angle >= 360.0f)
-        {
-            angle = 0.0f;
-        }
-        else if (angle <= -360.0f)
-        {
-            angle = 0.0f;
-        }
+        transform.position = position;
     }
-
-    public void Turn()
-    {
-        angle -= 90.0f * Time.deltaTime;
-    }
-
-    void OnGUI()
-    {
-        GUI.Box(new Rect(190, 80,400,25), "Press 1 to activate Display Mode and Press 2 to Deactivate it");
-    }
-
 }
