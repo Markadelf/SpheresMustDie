@@ -15,6 +15,13 @@ public class FirstPerson : MonoBehaviour {
     public int JumpCount = 1;
     public float DeathHeight = -10;
 
+    //Dash Ability parameters
+    public bool shouldHaveDash;
+    private bool isDashing;
+    public KeyCode dashKey;
+    public float dashSpeed, dashDecceleration;
+    private Vector3 dashVelocity;
+    
     private Camera cam;
     private CharacterController control;
     private float camAngle;
@@ -27,6 +34,7 @@ public class FirstPerson : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        isDashing = false;
         cam = GetComponentInChildren<Camera>();
         control = GetComponent<CharacterController>();
         camAngle = 0;
@@ -41,10 +49,13 @@ public class FirstPerson : MonoBehaviour {
     // Update is called once per frame
     void Update () {
         Vector3 move = new Vector3();
-        move += Input.GetAxis("Horizontal") * MoveSpeed * transform.right;
-        move += Input.GetAxis("Vertical") * MoveSpeed * transform.forward;
+        if (!isDashing)// restricting movement while dashing
+        {
+            move += Input.GetAxis("Horizontal") * MoveSpeed * transform.right;
+            move += Input.GetAxis("Vertical") * MoveSpeed * transform.forward;
+        }
 
-        if(canJump > 0 && Input.GetButtonDown("Jump"))
+        if (canJump > 0 && Input.GetButtonDown("Jump"))
         {
             yVel = jumpSpeed;
             canJump--;
@@ -70,6 +81,23 @@ public class FirstPerson : MonoBehaviour {
         if (transform.position.y < DeathHeight)
         {
             Destroy(gameObject);
+        }
+
+        // dash stuff below
+        if (Input.GetKeyDown(dashKey) && !isDashing && yVel == 0)
+        {
+            InitiateDash(move);
+        }
+
+        if (isDashing)
+        {
+            if (dashVelocity.magnitude <= 1.0f)
+            {
+                dashVelocity = Vector3.zero;
+                isDashing = false;
+            }
+            control.Move(dashVelocity * Time.deltaTime);
+            dashVelocity -= Vector3.Normalize(dashVelocity) * dashDecceleration * Time.deltaTime;
         }
     }
 
@@ -101,5 +129,21 @@ public class FirstPerson : MonoBehaviour {
         {
             Destroy(gameObject);
         }
+    }
+
+    private void InitiateDash(Vector3 moveVector)
+    {
+        Vector3 move1 = Vector3.Normalize(moveVector);
+
+        if (moveVector.magnitude < 0.5f)
+        {
+            dashVelocity = transform.forward * dashSpeed;
+            Debug.Log(transform.forward);
+        }
+        else
+        {
+            dashVelocity = move1 * dashSpeed;
+        }
+        isDashing = true;
     }
 }

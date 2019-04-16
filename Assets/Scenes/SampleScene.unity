@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.42865202, g: 0.4626068, b: 0.4921853, a: 1}
+  m_IndirectSpecularColor: {r: 0.42865193, g: 0.46260655, b: 0.49218476, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1181,6 +1181,11 @@ MonoBehaviour:
   JumpDist: 10
   TerminalVelocity: 100
   JumpCount: 2
+  DeathHeight: -10
+  shouldHaveDash: 1
+  dashKey: 308
+  dashSpeed: 100
+  dashDecceleration: 150
   blaster: {fileID: 1372472692}
 --- !u!143 &1372472689
 CharacterController:
@@ -1243,6 +1248,8 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1759030380385532, guid: 0295d2fc5e9bff7439dcdbc5e2ef9c05,
     type: 2}
   CoolDown: 0.1
+  AutoFire: 0
+  ApplyVelocity: 0
 --- !u!1001 &1374558612
 Prefab:
   m_ObjectHideFlags: 0

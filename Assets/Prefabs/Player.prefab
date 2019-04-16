@@ -213,6 +213,10 @@ MonoBehaviour:
   TerminalVelocity: 100
   JumpCount: 2
   DeathHeight: -10
+  shouldHaveDash: 1
+  dashKey: 308
+  dashSpeed: 100
+  dashDecceleration: 150
   blaster: {fileID: 114488865553354258}
 --- !u!114 &114488865553354258
 MonoBehaviour:
@@ -230,6 +234,8 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1759030380385532, guid: 0295d2fc5e9bff7439dcdbc5e2ef9c05,
     type: 2}
   CoolDown: 0.1
+  AutoFire: 0
+  ApplyVelocity: 0
 --- !u!136 &136224272955936392
 CapsuleCollider:
   m_ObjectHideFlags: 1
