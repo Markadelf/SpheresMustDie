@@ -135,6 +135,10 @@ public class KrakenTentacle : MonoBehaviour {
 
         hitbox.enabled = false;
 
+        yield return new WaitForSeconds(3);
+
+        Destroy(this.gameObject);
+
     }
 
     private void Build() {
@@ -169,7 +173,11 @@ public class KrakenTentacle : MonoBehaviour {
     }
 
     private void OnTriggerEnter(Collider other) {
-        Debug.Log(other.gameObject.name);
+        
+        if (other.gameObject.tag == "Player") {
+            Destroy(other.gameObject);
+        }
+
     }
 
     private void OnCollisionEnter(Collision collision) {
