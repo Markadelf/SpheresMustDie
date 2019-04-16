@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DeadBossSwitch : MonoBehaviour {
+public class DeadBossSwitch : MonoBehaviour
+{
 
     public int bossId;
     public GameObject alive;
@@ -10,35 +11,45 @@ public class DeadBossSwitch : MonoBehaviour {
 
     public bool checkEachFrame;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         if (BossDeathTracker.CheckDead(bossId))
         {
-            alive.SetActive(false);
-            dead.SetActive(true);
+            if (alive != null)
+                alive.SetActive(false);
+            if (dead != null)
+                dead.SetActive(true);
         }
         else
         {
-            alive.SetActive(true);
-            dead.SetActive(false);
+            if (alive != null)
+                alive.SetActive(true);
+            if (dead != null)
+                dead.SetActive(false);
         }
-        if(!checkEachFrame)
+        if (!checkEachFrame)
         {
             Destroy(this);
         }
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         if (BossDeathTracker.CheckDead(bossId))
         {
-            alive.SetActive(false);
-            dead.SetActive(true);
+            if (alive != null)
+                alive.SetActive(false);
+            if (dead != null)
+                dead.SetActive(true);
         }
         else
         {
-            alive.SetActive(true);
-            dead.SetActive(false);
+            if (alive != null)
+                alive.SetActive(true);
+            if (dead != null)
+                dead.SetActive(false);
         }
     }
 }
