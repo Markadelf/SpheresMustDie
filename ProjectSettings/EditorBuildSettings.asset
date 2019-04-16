@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Hub.unity
     guid: 26be1ae82ea3b4541b6ac48234d39f00
+  - enabled: 1
+    path: Assets/Scenes/Kraken.unity
+    guid: 06cef479076c5524fb3efe9992eb53e8
   m_configObjects: {}

@@ -6071,7 +6071,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Key: 0
-  SceneName: 
+  SceneName: Kraken
 --- !u!65 &1620980295
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6079,7 +6079,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1620980293}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -6255,7 +6255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Key: 0
-  SceneName: 
+  SceneName: Kraken
 --- !u!65 &1725132160
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6263,7 +6263,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1725132158}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -6354,7 +6354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Key: 0
-  SceneName: 
+  SceneName: Boss 1
 --- !u!65 &1729465369
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6362,7 +6362,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1729465367}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
