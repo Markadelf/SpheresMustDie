@@ -29,6 +29,11 @@ public class ComplexEnemyHealth : MonoBehaviour
         if(count <= 0)
         {
             Destroy(gameObject);
+            BossDeathTracker track = GetComponent<BossDeathTracker>();
+            if (track)
+            {
+                track.MarkDead();
+            }
         }
     }
 
