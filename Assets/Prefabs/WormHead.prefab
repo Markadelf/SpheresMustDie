@@ -157,6 +157,7 @@ GameObject:
   - component: {fileID: 114669804464888562}
   - component: {fileID: 114483319256157442}
   - component: {fileID: 114244006392767778}
+  - component: {fileID: 114153395067149064}
   m_Layer: 16
   m_Name: WormHead
   m_TagString: Untagged
@@ -1562,6 +1563,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Dependant: {fileID: 0}
+--- !u!114 &114153395067149064
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1268058646478150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68064614164a23143bd8fa09eedf86fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossId: 1
 --- !u!114 &114154047899255344
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1708,6 +1721,7 @@ MonoBehaviour:
     type: 2}
   CoolDown: 0.3
   AutoFire: 0
+  ApplyVelocity: 0
 --- !u!114 &114520705320177884
 MonoBehaviour:
   m_ObjectHideFlags: 1
