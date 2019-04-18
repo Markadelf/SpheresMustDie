@@ -26,10 +26,10 @@ public class UIManager : MonoBehaviour {
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            SceneManager.LoadScene("LaunchScene");
-        }
+        //if (Input.GetKeyDown(KeyCode.Escape))
+        //{
+        //    SceneManager.LoadScene("LaunchScene");
+        //}
     }
 
 
