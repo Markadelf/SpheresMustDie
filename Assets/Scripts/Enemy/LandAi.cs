@@ -2,37 +2,37 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EyeBallLaser : MonoBehaviour {
+public class LandAi : MonoBehaviour {
+    public float Speed;
     public float Agility;
     public float SightDistance = -1;
     public LayerMask BlockSight = 1;
-    public float MaxTilt;
 
+    private Rigidbody rigid;
     private Gun blaster;
     private bool alert;
     public bool Alert { get { return alert; } }
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
+        rigid = GetComponent<Rigidbody>();
         blaster = GetComponent<Gun>();
         alert = false;
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update()
+    {
+        rigid.velocity = Vector3.zero;
         if (FirstPerson.PLAYER)
         {
             Vector3 toPlayer = FirstPerson.PLAYER.transform.position - transform.position;
+            toPlayer.y = 0;
             if (alert)
             {
-                if(transform.parent == null)
-                {
-                    transform.forward = Vector3.RotateTowards(transform.forward, toPlayer, Agility * Time.deltaTime, 10000);
-                }
-                else
-                {
-                    transform.forward = Vector3.RotateTowards(transform.parent.forward, Vector3.RotateTowards(transform.forward, toPlayer, Agility * Time.deltaTime, 10000), MaxTilt, 100000);
-                }
+                transform.forward = Vector3.RotateTowards(transform.forward, toPlayer, Agility * Time.deltaTime, 10000);
+                rigid.velocity = transform.forward * Speed;
                 if (blaster)
                 {
                     blaster.TryShoot();
@@ -43,21 +43,20 @@ public class EyeBallLaser : MonoBehaviour {
                 alert = CanSeePlayer(toPlayer);
             }
         }
-	}
+    }
 
     bool CanSeePlayer(Vector3 toPlayer)
     {
         float mag = toPlayer.magnitude;
-        if(mag > SightDistance && SightDistance != -1)
+        if (mag > SightDistance && SightDistance != -1)
         {
             return false;
         }
         Ray ray = new Ray(this.transform.position, toPlayer);
-        if(!Physics.Raycast(ray, toPlayer.magnitude, BlockSight))
+        if (!Physics.Raycast(ray, toPlayer.magnitude, BlockSight))
         {
             return true;
         }
         return false;
     }
-
 }

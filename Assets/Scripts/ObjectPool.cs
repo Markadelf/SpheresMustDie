@@ -20,11 +20,13 @@ public class ObjectPool : MonoBehaviour
     void Awake()
     {
         pool = new Stack<GameObject>();
+
+
         for (int i = 0; i < Max; i++)
         {
             pool.Push(Instantiate(Prefab));
-            pool.Peek().SetActive(false);
             pool.Peek().transform.SetParent(transform);
+            pool.Peek().SetActive(false);
         }
         poolDirectory[Prefab] = this;
     }
@@ -48,6 +50,10 @@ public class ObjectPool : MonoBehaviour
     public static void Release(GameObject obj)
     {
         obj.SetActive(false);
-        obj.GetComponentInParent<ObjectPool>().pool.Push(obj);
+        ObjectPool pool = obj.GetComponentInParent<ObjectPool>();
+        if (pool)
+        {
+            pool.pool.Push(obj);
+        }
     }
 }

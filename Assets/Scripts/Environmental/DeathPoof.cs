@@ -13,7 +13,7 @@ public class DeathPoof : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(!particle.isEmitting)
+		if(!particle.IsAlive())
         {
             ObjectPool.Release(gameObject);
         }
