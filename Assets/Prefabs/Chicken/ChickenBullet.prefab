@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30
-  range: 20
+  range: 100
 --- !u!135 &135438612934595470
 SphereCollider:
   m_ObjectHideFlags: 1

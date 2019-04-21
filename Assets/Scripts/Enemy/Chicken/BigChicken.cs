@@ -61,7 +61,7 @@ public class BigChicken : MonoBehaviour {
                     timer = preChargeTime;
                     break;
                 case 2:
-                    ai.Speed = baseSpeed * 1.5f;
+                    ai.Speed = baseSpeed * 2f;
                     ai.Agility = 0;
                     timer = chargeTime;
                     break;
@@ -86,6 +86,14 @@ public class BigChicken : MonoBehaviour {
         transform.position = pos;
 
         transform.localScale = Vector3.Lerp(new Vector3(MinSize, MinSize, MinSize), new Vector3(MaxSize, MaxSize, MaxSize), (health * 1f) / MaxHealth);
+
+        transform.forward = -Vector3.Cross(Vector3.up, _core.transform.right);
+        eye.transform.forward = _core.transform.forward;
+        phase = 3;
+        timer = 1;
+        ai.Speed = 0;
+        ai.Agility = 0;
+
         gameObject.SetActive(true);
     }
 

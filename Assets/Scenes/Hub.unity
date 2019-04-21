@@ -6354,7 +6354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Key: 0
-  SceneName: Boss 1
+  SceneName: Chicken
 --- !u!65 &1729465369
 BoxCollider:
   m_ObjectHideFlags: 0

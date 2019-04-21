@@ -8487,10 +8487,10 @@ MonoBehaviour:
   baseSpeed: 12
   baseAgility: 1.5
   chaseTime: 10
-  preChargeTime: 3
-  chargeTime: 2
+  preChargeTime: 4
+  chargeTime: 3
   restTime: 0
-  MaxHealth: 50
+  MaxHealth: 30
   MinSize: 1
   MaxSize: 2
 --- !u!114 &114135129799246750
