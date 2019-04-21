@@ -31,7 +31,12 @@ public class LandAi : MonoBehaviour {
             toPlayer.y = 0;
             if (alert)
             {
-                transform.forward = Vector3.RotateTowards(transform.forward, toPlayer, Agility * Time.deltaTime, 10000);
+                if (toPlayer.x != 0 || toPlayer.z != 0)
+                {
+                    Vector3 dir = Vector3.RotateTowards(transform.forward, toPlayer, Agility * Time.deltaTime, 10000);
+                    dir.y = 0;
+                    transform.forward = dir;
+                }
                 rigid.velocity = transform.forward * Speed;
                 if (blaster)
                 {
