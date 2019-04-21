@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ReturnToPool : MonoBehaviour {
 
-    bool active = false;
+    public bool active = false;
 
 	// Use this for initialization
 	void Start () {

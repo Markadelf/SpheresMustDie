@@ -8484,13 +8484,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   core: {fileID: 1255086374214272, guid: cf67a9dc1d5fd0b4380be5fe6d431780, type: 2}
   eye: {fileID: 114270561729293088}
-  baseSpeed: 15
-  baseAgility: 2
+  baseSpeed: 12
+  baseAgility: 1.5
   chaseTime: 10
   preChargeTime: 3
   chargeTime: 2
   restTime: 0
-  MaxHealth: 1
+  MaxHealth: 50
   MinSize: 1
   MaxSize: 2
 --- !u!114 &114135129799246750
@@ -9475,7 +9475,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1953953005050094}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b4f974f195ed6fa4983154cbc2229a5c, type: 3}
   m_Name: 

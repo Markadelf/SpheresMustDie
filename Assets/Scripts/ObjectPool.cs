@@ -26,6 +26,11 @@ public class ObjectPool : MonoBehaviour
         {
             pool.Push(Instantiate(Prefab));
             pool.Peek().transform.SetParent(transform);
+            ReturnToPool rtp = pool.Peek().GetComponent<ReturnToPool>();
+            if(rtp)
+            {
+                rtp.active = false;
+            }
             pool.Peek().SetActive(false);
         }
         poolDirectory[Prefab] = this;

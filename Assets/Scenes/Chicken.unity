@@ -1991,7 +1991,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Prefab: {fileID: 1227710676183866, guid: c7e3ebf13493fca48a1adb5b42b7c83c, type: 2}
-  Max: 500
+  Max: 100
 --- !u!4 &1683425636
 Transform:
   m_ObjectHideFlags: 0

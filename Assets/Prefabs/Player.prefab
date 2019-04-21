@@ -214,7 +214,7 @@ MonoBehaviour:
   JumpCount: 2
   DeathHeight: -10
   shouldHaveDash: 1
-  dashKey: 308
+  dashKey: 304
   dashSpeed: 100
   dashDecceleration: 150
   blaster: {fileID: 114488865553354258}
