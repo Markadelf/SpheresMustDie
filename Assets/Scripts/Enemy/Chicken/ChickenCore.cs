@@ -9,6 +9,7 @@ public class ChickenCore : MonoBehaviour {
     public GameObject LittleChicken;
     private Transform[] spawnPoints;
     public float PhasePeriod;
+    public GameObject destroyOnDeath;
 
     private float timer;
     private int chicksCollected = 0;
@@ -19,6 +20,7 @@ public class ChickenCore : MonoBehaviour {
     {
         connected = chicken;
         spawnPoints = connected.GetComponentsInChildren<Transform>();
+        Health = connected.MaxHealth;
     }
 
     // Use this for initialization
@@ -27,7 +29,14 @@ public class ChickenCore : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(timer > 0)
+        if(Health <= 0)
+        {
+            if(destroyOnDeath != null)
+            {
+                Destroy(destroyOnDeath);
+            }
+        }
+		else if(timer > 0)
         {
             timer -= Time.deltaTime;
             if(timer <= 0)
@@ -48,6 +57,7 @@ public class ChickenCore : MonoBehaviour {
 
         transform.position = connected.eye.transform.position;
         transform.forward = connected.eye.transform.forward;
+        transform.localScale = connected.eye.transform.lossyScale;
 
         chicksCollected = 0;
         collecting = false;
@@ -76,7 +86,7 @@ public class ChickenCore : MonoBehaviour {
     {
         if(collecting)
         {
-            TinyChicken chickScript = other.GetComponent<TinyChicken>();
+            TinyChicken chickScript = other.GetComponentInParent<TinyChicken>();
             if (chickScript != null)
             {
                 chickScript.active = false;

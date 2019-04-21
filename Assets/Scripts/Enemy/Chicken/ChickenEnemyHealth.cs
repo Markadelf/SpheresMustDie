@@ -43,6 +43,7 @@ public class ChickenEnemyHealth : MonoBehaviour
         {
             WeakPoints[i].gameObject.SetActive(true);
         }
+        count = WeakPoints.Count;
     }
 
 
