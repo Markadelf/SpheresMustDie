@@ -110,4 +110,9 @@ public class BigChicken : MonoBehaviour {
     {
         gameEnd = true;
     }
+
+    private void OnDestroy()
+    {
+        gameEnd = true;
+    }
 }
