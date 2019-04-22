@@ -20,7 +20,7 @@ public class Display : MonoBehaviour {
 	void Update ()
     {
         rotation = Quaternion.Euler(rotation.x, angle, rotation.z);
-        angle -= 15.0f * Time.deltaTime;
+        angle -= 25.0f * Time.deltaTime;
 
         position.y = Mathf.Sin(Time.time)/2 + offSet;
 
