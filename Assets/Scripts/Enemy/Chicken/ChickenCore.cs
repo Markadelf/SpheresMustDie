@@ -58,6 +58,11 @@ public class ChickenCore : MonoBehaviour
 
     public void ActivateCore()
     {
+        // Fixes exceptions at scene switch
+        if(this == null)
+        {
+            return;
+        }
         SpawnChickens();
 
         transform.position = connected.eye.transform.position;
