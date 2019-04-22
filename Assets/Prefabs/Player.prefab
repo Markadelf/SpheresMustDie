@@ -71,7 +71,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1343425097614712}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 766.11, y: 2.54, z: -0.94982326}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4502269391332598}
@@ -207,14 +207,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoveSpeed: 10
   Sensitivity: 5
-  Gravity: -9.8
+  Gravity: -20
   JumpTime: 1
-  JumpDist: 10
+  JumpDist: 5
   TerminalVelocity: 100
   JumpCount: 2
   DeathHeight: -10
   shouldHaveDash: 1
-  dashKey: 308
+  dashKey: 304
   dashSpeed: 100
   dashDecceleration: 150
   blaster: {fileID: 114488865553354258}
@@ -233,7 +233,7 @@ MonoBehaviour:
   - {fileID: 4502269391332598}
   bulletPrefab: {fileID: 1759030380385532, guid: 0295d2fc5e9bff7439dcdbc5e2ef9c05,
     type: 2}
-  CoolDown: 0.1
+  CoolDown: 0.2
   AutoFire: 0
   ApplyVelocity: 0
 --- !u!136 &136224272955936392

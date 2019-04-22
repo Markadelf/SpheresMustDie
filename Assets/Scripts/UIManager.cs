@@ -29,6 +29,8 @@ public class UIManager : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             SceneManager.LoadScene("LaunchScene");
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
     }
 
