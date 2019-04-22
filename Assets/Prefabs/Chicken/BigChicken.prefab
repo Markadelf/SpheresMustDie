@@ -2585,7 +2585,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1953953005050094}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 765.51953, y: 0.9, z: -7.286869}
+  m_LocalPosition: {x: 765.51953, y: 0.9, z: -30.31}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4893152564950814}
@@ -8485,13 +8485,13 @@ MonoBehaviour:
   core: {fileID: 1255086374214272, guid: cf67a9dc1d5fd0b4380be5fe6d431780, type: 2}
   eye: {fileID: 114270561729293088}
   baseSpeed: 12
-  baseAgility: 1.5
+  baseAgility: 1
   chaseTime: 10
   preChargeTime: 4
   chargeTime: 3
   restTime: 0
   MaxHealth: 30
-  MinSize: 1
+  MinSize: 0.5
   MaxSize: 2
 --- !u!114 &114135129799246750
 MonoBehaviour:

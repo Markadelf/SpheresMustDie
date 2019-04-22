@@ -28,6 +28,7 @@ GameObject:
   - component: {fileID: 114326094079220564}
   - component: {fileID: 114524545583528280}
   - component: {fileID: 114949391021781384}
+  - component: {fileID: 114473108900158736}
   m_Layer: 9
   m_Name: ChickenCore
   m_TagString: Untagged
@@ -244,6 +245,7 @@ MonoBehaviour:
     type: 2}
   PhasePeriod: 3
   destroyOnDeath: {fileID: 1723839494617816}
+  LiveChicks: 0
 --- !u!114 &114326094079220564
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -261,6 +263,18 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   MaxTilt: 300
+--- !u!114 &114473108900158736
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1255086374214272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0791ed4c6c926e4199f917223d0018f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poofPrefab: {fileID: 1971579812842300, guid: 689b3d0ca6d612242a1c4eb0c7c73653, type: 2}
 --- !u!114 &114496866470954388
 MonoBehaviour:
   m_ObjectHideFlags: 1
