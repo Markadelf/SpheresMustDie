@@ -23,6 +23,7 @@ public class TinyChicken : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        core.LiveChicks = true;
         Vector3 target = new Vector3();
         if (ChickenCore.collecting)
         {
@@ -49,6 +50,7 @@ public class TinyChicken : MonoBehaviour {
         if (active)
         {
             core.Health--;
+            ObjectPool.Release(gameObject);
         }
     }
 
