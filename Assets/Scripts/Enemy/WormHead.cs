@@ -65,6 +65,7 @@ public class WormHead : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        ai.enabled = FirstPerson.GUN_AQUIRED;
         //return;
         if (first != null)
         {

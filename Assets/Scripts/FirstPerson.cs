@@ -5,6 +5,7 @@ using UnityEngine;
 public class FirstPerson : MonoBehaviour {
 
     public static FirstPerson PLAYER;
+    public static bool GUN_AQUIRED;
 
     public float MoveSpeed;
     public float Sensitivity;
@@ -44,6 +45,7 @@ public class FirstPerson : MonoBehaviour {
         canJump = 0;
         PLAYER = this;
         Cursor.visible = false;
+        GUN_AQUIRED = false;
     }
 
     // Update is called once per frame
@@ -73,7 +75,7 @@ public class FirstPerson : MonoBehaviour {
         camAngle = camAngle > -90 ? camAngle : -90;
         cam.transform.localRotation = Quaternion.Euler(camAngle, 0 , 0);
 
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && GUN_AQUIRED)
         {
             blaster.TryShoot();
         }
@@ -128,6 +130,11 @@ public class FirstPerson : MonoBehaviour {
         if (other.gameObject.layer == 13 || other.gameObject.layer == 11)
         {
             Destroy(gameObject);
+        }
+        if(other.gameObject.CompareTag("WeaponPickup"))
+        {
+            GUN_AQUIRED = true;
+            other.gameObject.SetActive(false);
         }
     }
 
