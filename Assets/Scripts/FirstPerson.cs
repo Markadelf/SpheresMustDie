@@ -31,21 +31,27 @@ public class FirstPerson : MonoBehaviour {
     private int canJump;
     
     //Other
-    public Gun blaster; 
+    public Gun blaster;
+    public GameObject gunMesh;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         isDashing = false;
         cam = GetComponentInChildren<Camera>();
         control = GetComponent<CharacterController>();
         camAngle = 0;
         Cursor.lockState = CursorLockMode.Locked;
         yVel = 0;
-        jumpSpeed = JumpDist / JumpTime - Gravity/(2 * JumpTime);
+        jumpSpeed = JumpDist / JumpTime - Gravity / (2 * JumpTime);
         canJump = 0;
         PLAYER = this;
         Cursor.visible = false;
         GUN_AQUIRED = false;
+        if (gunMesh != null)
+        {
+            gunMesh.SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -135,6 +141,7 @@ public class FirstPerson : MonoBehaviour {
         {
             GUN_AQUIRED = true;
             other.gameObject.SetActive(false);
+            gunMesh.SetActive(true);
         }
     }
 

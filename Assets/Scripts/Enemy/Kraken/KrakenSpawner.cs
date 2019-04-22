@@ -59,7 +59,7 @@ public class KrakenSpawner : MonoBehaviour {
         float headTimer = 0;
         while (true) {
 
-            if (isSpawning) {
+            if (isSpawning && FirstPerson.GUN_AQUIRED) {
 
                 timer += Time.deltaTime;
                 if (timer > spawnRate) {
