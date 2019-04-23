@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33443669157588288}
   - component: {fileID: 23871630661161390}
   - component: {fileID: 135711183478425232}
+  - component: {fileID: 114084027771267336}
   m_Layer: 0
   m_Name: Center
   m_TagString: Untagged
@@ -40,6 +41,7 @@ GameObject:
   - component: {fileID: 33210755241150936}
   - component: {fileID: 23828456883070186}
   - component: {fileID: 135338255562254232}
+  - component: {fileID: 114571832712658184}
   m_Layer: 0
   m_Name: Sphere (2)
   m_TagString: Untagged
@@ -58,6 +60,7 @@ GameObject:
   - component: {fileID: 33609780464110228}
   - component: {fileID: 23979451193401356}
   - component: {fileID: 135597795241383338}
+  - component: {fileID: 114716052459870618}
   m_Layer: 0
   m_Name: Sphere (1)
   m_TagString: Untagged
@@ -91,6 +94,7 @@ GameObject:
   - component: {fileID: 33269450721755530}
   - component: {fileID: 23648197158626188}
   - component: {fileID: 135052653388340418}
+  - component: {fileID: 114375462547574636}
   m_Layer: 0
   m_Name: Sphere (3)
   m_TagString: Untagged
@@ -109,6 +113,7 @@ GameObject:
   - component: {fileID: 33190465854475580}
   - component: {fileID: 23777514319406530}
   - component: {fileID: 135864093540454378}
+  - component: {fileID: 114384591612966820}
   m_Layer: 0
   m_Name: Sphere (4)
   m_TagString: Untagged
@@ -175,7 +180,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1585539563615090}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 799.3989, y: 2.191298, z: 27.91775}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4739448327019876}
@@ -409,6 +414,76 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1465391821792760}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114084027771267336
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1047063471952490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1783da159a0846418d6f2d0d4bf3867, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poofPrefab: {fileID: 1971579812842300, guid: 689b3d0ca6d612242a1c4eb0c7c73653, type: 2}
+  onEnable: 0
+  onDisable: 1
+--- !u!114 &114375462547574636
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1683867482426690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1783da159a0846418d6f2d0d4bf3867, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poofPrefab: {fileID: 1971579812842300, guid: 689b3d0ca6d612242a1c4eb0c7c73653, type: 2}
+  onEnable: 0
+  onDisable: 1
+--- !u!114 &114384591612966820
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1979536209819872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1783da159a0846418d6f2d0d4bf3867, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poofPrefab: {fileID: 1971579812842300, guid: 689b3d0ca6d612242a1c4eb0c7c73653, type: 2}
+  onEnable: 0
+  onDisable: 1
+--- !u!114 &114571832712658184
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1225424855907874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1783da159a0846418d6f2d0d4bf3867, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poofPrefab: {fileID: 1971579812842300, guid: 689b3d0ca6d612242a1c4eb0c7c73653, type: 2}
+  onEnable: 0
+  onDisable: 1
+--- !u!114 &114716052459870618
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1465391821792760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1783da159a0846418d6f2d0d4bf3867, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poofPrefab: {fileID: 1971579812842300, guid: 689b3d0ca6d612242a1c4eb0c7c73653, type: 2}
+  onEnable: 0
+  onDisable: 1
 --- !u!135 &135052653388340418
 SphereCollider:
   m_ObjectHideFlags: 1
