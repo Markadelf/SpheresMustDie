@@ -174,7 +174,7 @@ public class KrakenTentacle : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other) {
         
-        if (other.gameObject.tag == "Player") {
+        if (other.gameObject.tag == "Player" && !FirstPerson.EASY_MODO) {
             Destroy(other.gameObject);
         }
 
