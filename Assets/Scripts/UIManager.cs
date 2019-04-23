@@ -26,12 +26,15 @@ public class UIManager : MonoBehaviour {
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
-        if (Input.GetKeyDown(KeyCode.Escape))
+
+        if (Input.GetKeyDown(KeyCode.L))
+        //if (Input.GetKeyDown(KeyCode.Escape))
         {
             SceneManager.LoadScene("LaunchScene");
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
+
     }
 
 
