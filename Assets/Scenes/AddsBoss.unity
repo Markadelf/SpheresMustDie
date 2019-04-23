@@ -515,6 +515,11 @@ Prefab:
       value: 
       objectReference: {fileID: 1759030380385532, guid: 9e308aa95accce64791632b71bb28733,
         type: 2}
+    - target: {fileID: 23751746076025912, guid: 8059b8e8ef7a23d4a969254a25d758c9,
+        type: 2}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8059b8e8ef7a23d4a969254a25d758c9, type: 2}
   m_IsPrefabAsset: 0
@@ -1029,6 +1034,10 @@ Prefab:
     - target: {fileID: 400000, guid: abe81ad44d7dd904599077585cd87701, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: abe81ad44d7dd904599077585cd87701, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abe81ad44d7dd904599077585cd87701, type: 3}
