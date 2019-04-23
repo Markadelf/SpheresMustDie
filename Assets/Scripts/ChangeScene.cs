@@ -27,4 +27,9 @@ public class ChangeScene : MonoBehaviour {
         if(other.tag == "Player")
             SceneManager.LoadScene(SceneName);   
     }
+
+    public void Change()
+    {
+        SceneManager.LoadScene(SceneName);
+    }
 }
