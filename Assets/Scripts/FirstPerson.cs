@@ -6,7 +6,7 @@ public class FirstPerson : MonoBehaviour {
 
     public static FirstPerson PLAYER;
     public static bool GUN_AQUIRED;
-    public static bool EASY_MODO = true;
+    public static bool EASY_MODO = false;
 
     public float MoveSpeed;
     public float Sensitivity;
