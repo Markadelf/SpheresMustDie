@@ -6,6 +6,7 @@ public class FirstPerson : MonoBehaviour {
 
     public static FirstPerson PLAYER;
     public static bool GUN_AQUIRED;
+    public static bool EASY_MODO = false;
 
     public float MoveSpeed;
     public float Sensitivity;
@@ -125,7 +126,7 @@ public class FirstPerson : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.collider.gameObject.layer == 11)
+        if(collision.collider.gameObject.layer == 11 && !EASY_MODO)
         {
             Destroy(gameObject);
         }
@@ -133,7 +134,7 @@ public class FirstPerson : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == 13 || other.gameObject.layer == 11)
+        if ((other.gameObject.layer == 13 || other.gameObject.layer == 11) && !EASY_MODO)
         {
             Destroy(gameObject);
         }
