@@ -16,6 +16,7 @@ public class FirstPerson : MonoBehaviour {
     public float TerminalVelocity = 100;
     public int JumpCount = 1;
     public float DeathHeight = -10;
+    public bool CanHold = false;
 
     //Dash Ability parameters
     public bool shouldHaveDash;
@@ -82,7 +83,7 @@ public class FirstPerson : MonoBehaviour {
         camAngle = camAngle > -90 ? camAngle : -90;
         cam.transform.localRotation = Quaternion.Euler(camAngle, 0 , 0);
 
-        if (Input.GetButtonDown("Fire1") && GUN_AQUIRED)
+        if ((CanHold ? Input.GetButton("Fire1") : Input.GetButtonDown("Fire1")) && GUN_AQUIRED)
         {
             blaster.TryShoot();
         }
