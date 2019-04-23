@@ -22,7 +22,7 @@ public class Stem : MonoBehaviour {
                 p++;
             }
         }
-        GameObject head = Instantiate(AddsBossHead, new Vector3(765, 30, 48), Quaternion.identity) as GameObject;
+        GameObject head = Instantiate(AddsBossHead, new Vector3(765, 30, 46), Quaternion.identity) as GameObject;
         head.transform.parent = this.transform;
         insSegs[p] = head;
         segStartPos[p] = head.transform.position;
@@ -31,7 +31,8 @@ public class Stem : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         for (int i = 0; i < insSegs.Length - 1; i++) {
-            insSegs[i].transform.position = segStartPos[i] + new Vector3(Mathf.Sin(Time.time + 0.5f * i), 0, 0);
+            insSegs[i].transform.position = segStartPos[i] + new Vector3(2 * Mathf.Sin(3 * Time.time + 0.5f * i), 0, 0);
         }
-	}
+        insSegs[insSegs.Length-1].transform.position = segStartPos[segStartPos.Length-1] + new Vector3(Mathf.Sin(3 * Time.time), 0, 0);
+    }
 }
