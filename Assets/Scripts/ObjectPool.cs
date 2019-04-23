@@ -44,6 +44,10 @@ public class ObjectPool : MonoBehaviour
 
     public static GameObject GetObj(GameObject prefab)
     {
+        if(!poolDirectory.ContainsKey(prefab))
+        {
+            return null;
+        }
         ObjectPool pool = poolDirectory[prefab];
         if (pool.pool.Count == 0)
         {

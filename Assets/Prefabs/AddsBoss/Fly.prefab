@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 33122397627159878}
   - component: {fileID: 23143279011207164}
   - component: {fileID: 135062537807791754}
-  - component: {fileID: 114523728868823306}
+  - component: {fileID: 114624160434354508}
   m_Layer: 0
   m_Name: WeakPoint
   m_TagString: Untagged
@@ -200,9 +200,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4419287779226102}
-  - component: {fileID: 114140865323268840}
   - component: {fileID: 114389506395796504}
   - component: {fileID: 54472770262297416}
+  - component: {fileID: 114373221793854876}
   m_Layer: 11
   m_Name: Fly
   m_TagString: Untagged
@@ -354,7 +354,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1878983904150544}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 6, z: 0}
+  m_LocalPosition: {x: 770.5211, y: 47.784645, z: 7.157151}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4786163093784580}
@@ -1094,7 +1094,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &114140865323268840
+--- !u!114 &114373221793854876
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1102,11 +1102,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1878983904150544}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 621c4ac3dd0f7834fb6a98f15e66e5c5, type: 3}
+  m_Script: {fileID: 11500000, guid: 24052f56188dcb24286737b45b83eea0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   WeakPoints:
-  - {fileID: 114523728868823306}
+  - {fileID: 114624160434354508}
 --- !u!114 &114389506395796504
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1124,7 +1124,7 @@ MonoBehaviour:
   BlockSight:
     serializedVersion: 2
     m_Bits: 131073
---- !u!114 &114523728868823306
+--- !u!114 &114624160434354508
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1132,7 +1132,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1418768161768738}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fbedc1e44dbbfd4b82a74f6082e7679, type: 3}
+  m_Script: {fileID: 11500000, guid: df8cb2738c0f5fb489a227722e6869b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Dependant: {fileID: 0}

@@ -714,7 +714,8 @@ Prefab:
       propertyPath: XMag
       value: 3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114401665619699144, guid: f1138d1e5f961494b94908e443eaa386, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: f1138d1e5f961494b94908e443eaa386, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &721127928
@@ -828,7 +829,8 @@ Prefab:
       propertyPath: ZMag
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114401665619699144, guid: f1138d1e5f961494b94908e443eaa386, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: f1138d1e5f961494b94908e443eaa386, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &831968270 stripped
@@ -1074,7 +1076,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c28698d4369a15b478c66289deb37890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossId: 3
+  bossId: 4
   alive: {fileID: 0}
   dead: {fileID: 2004894389}
   checkEachFrame: 1

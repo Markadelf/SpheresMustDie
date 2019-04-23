@@ -12,19 +12,21 @@ public class AddsBossManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (BossDeathTracker.CheckDead(3)) {
-
-            foreach (Transform child in leaf1.transform) {
-                GameObject.Destroy(child.gameObject);
-            }
-            foreach (Transform child in leaf2.transform)
-            {
-                GameObject.Destroy(child.gameObject);
-            }
-            foreach (Transform child in stem.transform)
-            {
-                GameObject.Destroy(child.gameObject);
-            }
+        if (BossDeathTracker.CheckDead(4)) {
+            Destroy(leaf1);
+            Destroy(leaf2);
+            Destroy(stem);
+            //foreach (Transform child in leaf1.transform) {
+            //    GameObject.Destroy(child.gameObject);
+            //}
+            //foreach (Transform child in leaf2.transform)
+            //{
+            //    GameObject.Destroy(child.gameObject);
+            //}
+            //foreach (Transform child in stem.transform)
+            //{
+            //    GameObject.Destroy(child.gameObject);
+            //}
 
         }
 	}
