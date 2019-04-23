@@ -206,7 +206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b2e81977681b934b9ed4a6bdb80db00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offSet: 1
+  offSet: 2
 --- !u!198 &198303708345279746
 ParticleSystem:
   m_ObjectHideFlags: 1

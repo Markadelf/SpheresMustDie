@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BigChicken : MonoBehaviour {
+public class BigChicken : MonoBehaviour
+{
     private bool gameEnd = false;
 
     public GameObject core;
@@ -23,9 +24,11 @@ public class BigChicken : MonoBehaviour {
     private int phase;
     private float timer;
     private Animator anim;
+    private bool awake = false;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         core = Instantiate(core);
         core.SetActive(false);
         _core = core.GetComponent<ChickenCore>();
@@ -40,42 +43,50 @@ public class BigChicken : MonoBehaviour {
         anim = GetComponent<Animator>();
         transform.localScale = new Vector3(MaxSize, MaxSize, MaxSize);
     }
-	
-	// Update is called once per frame
-	void Update () {
-        timer -= Time.deltaTime;
-        if (timer <= 0 && ai != null)
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (awake)
         {
-            phase = (phase + 1) % 4;
-            switch (phase)
+            timer -= Time.deltaTime;
+            if (timer <= 0 && ai != null)
             {
-                case 0:
-                    ai.Speed = baseSpeed;
-                    ai.Agility = baseAgility;
-                    timer = chaseTime;
-                    anim.Play("ChickenWalk");
-                    break;
-                case 1:
-                    ai.Speed = 0;
-                    ai.Agility = baseAgility * 1.5f;
-                    timer = preChargeTime;
-                    break;
-                case 2:
-                    ai.Speed = baseSpeed * 2f;
-                    ai.Agility = 0;
-                    timer = chargeTime;
-                    break;
-                case 3:
-                    ai.Speed = 0;
-                    ai.Agility = 0;
-                    timer = restTime;
-                    anim.Play("Idle");
-                    break;
-                default:
-                    break;
+                phase = (phase + 1) % 4;
+                switch (phase)
+                {
+                    case 0:
+                        ai.Speed = baseSpeed;
+                        ai.Agility = baseAgility;
+                        timer = chaseTime;
+                        anim.Play("ChickenWalk");
+                        break;
+                    case 1:
+                        ai.Speed = 0;
+                        ai.Agility = baseAgility * 1.5f;
+                        timer = preChargeTime;
+                        break;
+                    case 2:
+                        ai.Speed = baseSpeed * 2f;
+                        ai.Agility = 0;
+                        timer = chargeTime;
+                        break;
+                    case 3:
+                        ai.Speed = 0;
+                        ai.Agility = 0;
+                        timer = restTime;
+                        anim.Play("Idle");
+                        break;
+                    default:
+                        break;
+                }
             }
         }
-
+        else if (ai.Alert)
+        {
+            awake = true;
+            anim.Play("ChickenWalk");
+        }
 
     }
 
@@ -99,7 +110,7 @@ public class BigChicken : MonoBehaviour {
 
     private void OnDisable()
     {
-        if(gameEnd)
+        if (gameEnd)
         {
             return;
         }
