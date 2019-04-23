@@ -142,6 +142,7 @@ GameObject:
   - component: {fileID: 54731383520084532}
   - component: {fileID: 114621419463931718}
   - component: {fileID: 114278267564060638}
+  - component: {fileID: 114629034891996752}
   m_Layer: 0
   m_Name: AddsBossHead
   m_TagString: Untagged
@@ -1568,6 +1569,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Dependant: {fileID: 0}
+--- !u!114 &114629034891996752
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1313074038327702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68064614164a23143bd8fa09eedf86fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossId: 3
 --- !u!114 &114664880629688910
 MonoBehaviour:
   m_ObjectHideFlags: 1
