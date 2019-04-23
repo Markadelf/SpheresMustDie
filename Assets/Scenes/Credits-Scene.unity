@@ -486,8 +486,8 @@ MonoBehaviour:
     <size=180%> <align="center">\u2022 Mark DelFavero  \u2022 Shantanu Jamble  \u2022
     Herman McElveen</size>
 
-    <size=180%> <align="center">\u2022 Jeff Bauer \u2022 Sadanand Naik  \u2022 Xin
-    Ollyting</size>
+    <size=180%> <align="center">\u2022 Jeff Bauer \u2022 Sadanand Naik  \u2022 Olly
+    Ting Xin</size>
 
 
 '
@@ -558,10 +558,10 @@ MonoBehaviour:
   m_margin: {x: 279.8756, y: 40.856277, z: -1987.8658, w: -458.83997}
   m_textInfo:
     textComponent: {fileID: 1120992735}
-    characterCount: 117
+    characterCount: 118
     spriteCount: 0
-    spaceCount: 27
-    wordCount: 14
+    spaceCount: 28
+    wordCount: 15
     linkCount: 0
     lineCount: 5
     pageCount: 1

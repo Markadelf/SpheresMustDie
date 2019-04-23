@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33601744485432642}
   - component: {fileID: 23229082802900284}
   - component: {fileID: 135827583515696296}
+  - component: {fileID: 114955242354522726}
   m_Layer: 0
   m_Name: Stem1
   m_TagString: Untagged
@@ -84,6 +85,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1717414194304116}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114955242354522726
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1717414194304116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0791ed4c6c926e4199f917223d0018f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poofPrefab: {fileID: 1971579812842300, guid: 7555936a07e5d3441b3948f86ebc2ea6, type: 2}
 --- !u!135 &135827583515696296
 SphereCollider:
   m_ObjectHideFlags: 1
