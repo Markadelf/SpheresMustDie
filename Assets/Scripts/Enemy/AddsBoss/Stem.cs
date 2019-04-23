@@ -26,6 +26,7 @@ public class Stem : MonoBehaviour {
         head.transform.parent = this.transform;
         insSegs[p] = head;
         segStartPos[p] = head.transform.position;
+        AddsBossManager.head = head;
 	}
 	
 	// Update is called once per frame

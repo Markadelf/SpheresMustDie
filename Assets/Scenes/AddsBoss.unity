@@ -518,6 +518,11 @@ Prefab:
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114079380522224762, guid: 8059b8e8ef7a23d4a969254a25d758c9,
+        type: 2}
+      propertyPath: DeathHeight
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8059b8e8ef7a23d4a969254a25d758c9, type: 2}
   m_IsPrefabAsset: 0
