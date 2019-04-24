@@ -7641,8 +7641,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   core: {fileID: 0}
   active: 0
-  agility: 1
+  agility: 2
   speed: 15
+  deathHeight: 0
 --- !u!114 &114518340864041032
 MonoBehaviour:
   m_ObjectHideFlags: 1
