@@ -156,6 +156,16 @@ Prefab:
       propertyPath: m_Name
       value: WormHead (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 114390358404666996, guid: 96f5edf75bf593845b65567c348158f9,
+        type: 2}
+      propertyPath: angleLimit
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 114390358404666996, guid: 96f5edf75bf593845b65567c348158f9,
+        type: 2}
+      propertyPath: Agility
+      value: 1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96f5edf75bf593845b65567c348158f9, type: 2}
   m_IsPrefabAsset: 0

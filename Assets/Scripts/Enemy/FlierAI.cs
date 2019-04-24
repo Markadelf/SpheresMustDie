@@ -31,7 +31,7 @@ public class FlierAI : MonoBehaviour {
             toPlayer.y *= YWeight;
             if (alert)
             {
-                transform.forward = Vector3.RotateTowards(Vector3.down, Vector3.RotateTowards(Vector3.up, Vector3.RotateTowards(transform.forward, toPlayer, Agility * Time.deltaTime, 10000), angleLimit + 90, 1000), angleLimit + 90, 1000);
+                transform.forward = Vector3.RotateTowards(Vector3.down, Vector3.RotateTowards(Vector3.up, Vector3.RotateTowards(transform.forward, toPlayer, Agility * Time.deltaTime, 10000), (angleLimit + 90) * Mathf.Deg2Rad, 1000), (angleLimit + 90) * Mathf.Deg2Rad, 1000);
                 rigid.velocity = transform.forward * Speed;
                 if (blaster)
                 {
