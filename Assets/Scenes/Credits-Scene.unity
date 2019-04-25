@@ -253,6 +253,8 @@ MonoBehaviour:
 
     <size=180%> <align="left">\u2022 <link="https://roystan.net/articles/toon-shader.html">https://roystan.net/articles/toon-shader.html</link></size>
 
+    <size=140%> <align="left">\u2022 <link="https://assetstore.unity.com/packages/essentials/post-processing-stack-83912?aid=1100lKkI&utm_source=affl">https://assetstore.unity.com/packages/essentials/post-processing-stack-83912?aid=1100lKkI&utm_source=aff</link></size>
+
 
 '
   m_isRightToLeft: 0
@@ -322,12 +324,12 @@ MonoBehaviour:
   m_margin: {x: 279.8756, y: -127.81752, z: -1993.2026, w: -458.83997}
   m_textInfo:
     textComponent: {fileID: 239742568}
-    characterCount: 116
+    characterCount: 224
     spriteCount: 0
-    spaceCount: 19
-    wordCount: 17
-    linkCount: 1
-    lineCount: 5
+    spaceCount: 22
+    wordCount: 29
+    linkCount: 2
+    lineCount: 7
     pageCount: 1
     materialCount: 2
   m_havePropertiesChanged: 0
@@ -390,7 +392,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 5.999878, y: 140}
+  m_AnchoredPosition: {x: 5.999878, y: 40}
   m_SizeDelta: {x: 525.5, y: 117.4}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &822978781
@@ -595,7 +597,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -239, y: 72}
+  m_AnchoredPosition: {x: -239, y: -20}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1120992735
