@@ -13,7 +13,6 @@ public class Display : MonoBehaviour {
     {
         rotation = this.gameObject.transform.rotation;
         position = this.gameObject.transform.position;
-        Debug.Log(rotation);
 	}
 	
 	// Update is called once per frame

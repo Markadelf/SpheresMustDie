@@ -32,6 +32,7 @@ public class KrakenSpawner : MonoBehaviour {
     private float headSpawnRate;
 
     private bool isSpawning = false;
+    private List<AngleRange> blockedRanges = new List<AngleRange>();
 
 	// Use this for initialization
 	void Start () {
@@ -63,13 +64,19 @@ public class KrakenSpawner : MonoBehaviour {
 
                 timer += Time.deltaTime;
                 if (timer > spawnRate) {
-                    Spawn(tentaclePrefab, tentacleDistance, depthOverTime);
+                    AngleRange ar = GetSpawnLocation(30f);
+                    if (ar != null) {
+                        Spawn(tentaclePrefab, tentacleDistance, depthOverTime, ar, 10f);
+                    }
                     timer = 0;
                 }
 
                 headTimer += Time.deltaTime;
                 if (headTimer > headSpawnRate) {
-                    Spawn(headPrefab, headDistance, headDepthOverTime);
+                    AngleRange ar = GetSpawnLocation(45f);
+                    if (ar != null) {
+                        Spawn(headPrefab, headDistance, headDepthOverTime, ar, 20f);
+                    }
                     headTimer = 0;
                 }
 
@@ -81,7 +88,32 @@ public class KrakenSpawner : MonoBehaviour {
 
     }
 
-    private void Spawn(GameObject prefab, float distance, Vector2 dot) {
+    private AngleRange GetSpawnLocation(float width) {
+
+        for (int i = 0; i < 100; i++) {
+
+            float center = Random.Range(0f, 360f);
+            AngleRange potentialAR = new AngleRange(center, width);
+
+            bool valid = true;
+            foreach (AngleRange ar in blockedRanges) {
+                if (potentialAR.Intersects(ar)) {
+                    valid = false;
+                    break;
+                }
+            }
+
+            if (valid) {
+                return potentialAR;
+            }
+
+        }
+
+        return null;
+
+    }
+
+    private void Spawn(GameObject prefab, float distance, Vector2 dot, AngleRange angleRange, float angleRangeLifespan) {
 
         GameObject obj = Instantiate(prefab, this.transform);
         Transform xform = obj.transform;
@@ -89,11 +121,15 @@ public class KrakenSpawner : MonoBehaviour {
         xform.eulerAngles = Vector3.up * Random.Range(0f, 360f);
         xform.localPosition = xform.forward * distance;
 
-        StartCoroutine(SpawnCR(obj, dot));
+        if (angleRange != null) {
+            blockedRanges.Add(angleRange);
+        }
+
+        StartCoroutine(SpawnCR(obj, dot, angleRange, angleRangeLifespan));
 
     }
 
-    private IEnumerator SpawnCR(GameObject obj, Vector2 dot) {
+    private IEnumerator SpawnCR(GameObject obj, Vector2 dot, AngleRange angleRange, float angleRangeLifespan) {
 
         float currSpawnTime = 0;
         while (currSpawnTime < spawnTime) {
@@ -108,7 +144,28 @@ public class KrakenSpawner : MonoBehaviour {
             yield return null;
 
         }
+        
+        if (angleRange != null) {
+            yield return new WaitForSeconds(angleRangeLifespan);
+            blockedRanges.Remove(angleRange);
+        }
 
+    }
+
+    private class AngleRange {
+        public float start;
+        public float end;
+        public AngleRange(float center, float width) {
+            start = center - width / 2f;
+            end = center + width / 2f;
+        }
+        public bool Intersects(AngleRange other) {
+            // Normal check
+            if (end > other.start && start < other.end) {
+                return true;
+            }
+            return false;
+        }
     }
 
 }
