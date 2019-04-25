@@ -8,6 +8,7 @@ public class TinyChicken : MonoBehaviour {
     public float agility;
     public float speed;
     Rigidbody rigid;
+    public float deathHeight = 0;
 
     private Vector3 rand;
 
@@ -43,6 +44,11 @@ public class TinyChicken : MonoBehaviour {
             transform.forward = dir;
         }
         rigid.velocity = transform.forward * speed + new Vector3(0, rigid.velocity.y, 0);
+
+        if(transform.position.y < deathHeight)
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     private void OnDisable()
